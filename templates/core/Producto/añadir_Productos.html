@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %} 
+ 
+{% block extrastatic %} 
+<title>Añadir Producto</title> 
+{% endblock %}
+ 
+{% block content %}
+    <h1>Ingresar Producto</h1>
+    
+    <div class="content container">
+    <form method="POST">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">GRABAR</button>
+    </form>
+    </div>
+ 
+{% endblock %}
